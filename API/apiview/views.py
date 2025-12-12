@@ -10,5 +10,5 @@ from.serializer import DataSerializer
 @api_view(['GET'])
 def get_users(resquest):
     users = Data.objects.all()
-    serializer = DataSerializer(users, many=True)
+    serializer = DataSerializer(users)
     return Response(serializer.data)
